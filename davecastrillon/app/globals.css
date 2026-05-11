@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors from the PDF portfolio */
+  --color-red-accent: #A11D1F;
+  --color-black: #1A1A1A;
+  --color-gray-dark: #4A4A4A;
+  --color-gray: #888888;
+  --color-gray-light: #E0E0E0;
+  --color-off-white: #FBFAF8;
+
+  /* Typography */
+  --font-sans: var(--font-lato), system-ui, sans-serif;
+
+  /* Type scale matching PDF */
+  --text-display-xl: 90px;
+  --text-display-l: 64px;
+  --text-display-m: 56px;
+  --text-heading: 28px;
+  --text-body-l: 16px;
+  --text-body: 15px;
+  --text-body-s: 13px;
+  --text-label: 11px;
+
+  /* Line heights */
+  --leading-tight: 1.0;
+  --leading-snug: 1.125;
+  --leading-normal: 1.6;
+
+  /* Letter spacing */
+  --tracking-label: 0.15em;
+  --tracking-tight: -0.02em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-black font-sans antialiased;
+    font-feature-settings: "kern", "liga";
+  }
+  ::selection {
+    background: var(--color-red-accent);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    font-size: var(--text-label);
+    font-weight: 500;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-gray);
+  }
+  .red-bar {
+    background: var(--color-red-accent);
+    width: 60px;
+    height: 3px;
+  }
+}
