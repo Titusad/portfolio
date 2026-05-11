@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import Container from '@/components/ui/Container'
 
@@ -10,7 +11,7 @@ const featuredCases = [
     eyebrow: 'Legacy Modernization · Design System · Configurator',
     description:
       'A full modernization of the legacy MSM platform for an ASSA ABLOY company — used by thousands of integrators across access control installations worldwide.',
-    image: '/images/cases/lsp/featured.png',
+    image: '/images/cases/lsp/featured.jpg',
   },
   {
     number: '02',
@@ -44,14 +45,23 @@ function FeaturedCard({
       href={`/work/${c.slug}`}
       className="group flex flex-col gap-0 border border-gray-light hover:border-black transition-colors duration-300"
     >
-      {/* Image placeholder */}
+      {/* Image */}
       <div
-        className={`w-full bg-gray-light overflow-hidden ${featured ? 'aspect-21/9' : 'aspect-video'}`}
+        className={`w-full bg-gray-light overflow-hidden relative ${featured ? 'aspect-21/9' : 'aspect-video'}`}
       >
-        {/* Replace with next/image once assets are ready */}
-        <div className="w-full h-full bg-[#EBEBEB] flex items-end p-4">
-          <span className="text-label text-gray">{c.title}</span>
-        </div>
+        {c.image ? (
+          <Image
+            src={c.image}
+            alt={c.title}
+            fill
+            className="object-cover"
+            sizes={featured ? '100vw' : '50vw'}
+          />
+        ) : (
+          <div className="w-full h-full bg-[#EBEBEB] flex items-end p-4">
+            <span className="text-label text-gray">{c.title}</span>
+          </div>
+        )}
       </div>
 
       {/* Content */}
