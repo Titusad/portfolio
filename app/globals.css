@@ -17,10 +17,10 @@
   --text-display-l: 64px;
   --text-display-m: 56px;
   --text-heading: 28px;
-  --text-body-l: 16px;
-  --text-body: 15px;
-  --text-body-s: 13px;
-  --text-label: 11px;
+  --text-body-l: 20px;
+  --text-body: 18px;
+  --text-body-s: 16px;
+  --text-label: 14px;
 
   /* Line heights */
   --leading-tight: 1.0;
@@ -44,6 +44,16 @@
     background: var(--color-red-accent);
     color: white;
   }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @layer utilities {

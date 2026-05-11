@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
@@ -13,12 +14,16 @@ const NAV_LINKS = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const darkPages = ['/', '/contact']
+  const onDark = darkPages.includes(pathname) && !scrolled
 
   return (
     <header
@@ -31,7 +36,9 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-body font-light tracking-[0.12em] uppercase text-black hover:text-red-accent transition-colors duration-200"
+            className={`text-body font-light tracking-[0.12em] uppercase transition-colors duration-300 ${
+              onDark ? 'text-white hover:text-gray-light' : 'text-black hover:text-red-accent'
+            }`}
           >
             D/C
           </Link>
@@ -42,7 +49,9 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className="text-body-s font-light tracking-wide text-gray-dark hover:text-black transition-colors duration-200"
+                className={`text-body-s font-light tracking-wide transition-colors duration-300 ${
+                  onDark ? 'text-white/70 hover:text-white' : 'text-gray-dark hover:text-black'
+                }`}
               >
                 {label}
               </Link>
@@ -57,7 +66,9 @@ export default function Header() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden text-black p-1"
+            className={`md:hidden p-1 transition-colors duration-300 ${
+              onDark ? 'text-white' : 'text-black'
+            }`}
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
           >
