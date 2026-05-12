@@ -35,7 +35,7 @@ export default function LifeSafetyPowerPage() {
       <section id="overview" className="py-32 border-b border-gray-light">
         <Container>
           <Eyebrow>Case Study · 01</Eyebrow>
-          <h1 className="mt-4 text-display-m md:text-[80px] font-light leading-[1.05] tracking-tight">
+          <h1 className="mt-4 text-[48px] md:text-display-l font-light leading-[1.05] tracking-tight">
             LifeSafety Power
           </h1>
           <p className="mt-4 text-[22px] italic text-gray-dark max-w-2xl">

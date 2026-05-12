@@ -12,7 +12,7 @@ export default function PageTitle({ eyebrow, title, subtitle, className = '' }: 
     <div className={`flex flex-col gap-6 ${className}`}>
       <div className="w-[60px] h-[3px] bg-red-accent" />
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h1 className="text-display-m md:text-display-l font-light leading-snug tracking-tight text-black">
+      <h1 className="text-[32px] md:text-[40px] font-light leading-snug tracking-tight text-black">
         {title}
       </h1>
       {subtitle && (
