@@ -239,35 +239,15 @@ export default function LifeSafetyPowerPage() {
               {
                 src: '/images/cases/lsp/legacy-home.png',
                 alt: 'Legacy MSM Home',
-                caption: 'Home · Connected Devices',
+                caption: 'Legacy MSM — Home · Connected Devices',
               },
               {
                 src: '/images/cases/lsp/legacy-critical.png',
                 alt: 'Legacy Critical Events',
-                caption: 'Summary · Critical Events',
-              },
-              {
-                src: '/images/cases/lsp/legacy-snapshot.png',
-                alt: 'Legacy Snapshot',
-                caption: 'Summary · Snapshot',
-              },
-              {
-                src: '/images/cases/lsp/legacy-stats.png',
-                alt: 'Legacy Statistics',
-                caption: 'Summary · Statistics',
-              },
-              {
-                src: '/images/cases/lsp/legacy-analysis.png',
-                alt: 'Legacy Analysis',
-                caption: 'Summary · Analysis',
-              },
-              {
-                src: '/images/cases/lsp/legacy-reports.png',
-                alt: 'Legacy Reports',
-                caption: 'Reports · Power Report',
+                caption: 'Legacy MSM — Summary · Critical Events',
               },
             ]}
-            columns={3}
+            columns={2}
           />
         </Container>
       </section>
@@ -355,20 +335,6 @@ export default function LifeSafetyPowerPage() {
                 caption: 'Event Timeline + Live State',
                 description:
                   'Events index the history. The main panel reconstructs system state at the moment of any event clicked.',
-              },
-              {
-                src: '/images/cases/lsp/m8-outputs.png',
-                alt: 'M8 Outputs Preserved',
-                caption: 'M8 Outputs, Preserved',
-                description:
-                  "Sixteen LEDs, identical to the firmware-level convention integrators recognize. Above them, a count that didn't exist before.",
-              },
-              {
-                src: '/images/cases/lsp/analyze-data.png',
-                alt: 'Analyze Data Power User',
-                caption: 'Analyze Data · Power User',
-                description:
-                  'Statistics, charts, and raw data live one click away — opt-in depth for the integrator who needs to dig in.',
               },
               {
                 src: '/images/cases/lsp/product-wizard.png',

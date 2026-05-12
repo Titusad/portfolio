@@ -38,7 +38,17 @@
   }
   body {
     @apply bg-white text-black font-sans antialiased;
+    font-weight: 400;
     font-feature-settings: "kern", "liga";
+  }
+  p, li, blockquote {
+    font-weight: 400;
+  }
+  h1, h2 {
+    font-weight: 300;
+  }
+  h3, h4 {
+    font-weight: 400;
   }
   ::selection {
     background: var(--color-red-accent);

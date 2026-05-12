@@ -52,7 +52,7 @@ export default function TableOfContents({
   }
 
   return (
-    <nav className={`sticky top-24 flex flex-col gap-1 ${className}`} aria-label="Table of contents">
+    <nav className={`fixed left-6 top-24 w-44 hidden 2xl:flex flex-col gap-1 ${className}`} aria-label="Table of contents">
       <span className="text-label font-medium tracking-label uppercase text-gray mb-4">
         On this page
       </span>
