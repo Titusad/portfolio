@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import PageTitle from '@/components/case-study/PageTitle'
 import MetaBlock from '@/components/case-study/MetaBlock'
@@ -77,7 +78,7 @@ export default function DalogPage() {
             </p>
           </div>
 
-          <p className="mt-8 text-[14px] text-gray-dark">
+          <p className="mt-8 text-label text-gray-dark">
             <a
               href="https://dalog.net"
               className="underline decoration-red-accent decoration-2 underline-offset-4"
@@ -373,16 +374,21 @@ export default function DalogPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 mt-12">
-            <div className="bg-off-white rounded aspect-[4/3] flex items-center justify-center">
-              <span className="text-gray text-sm italic">
-                DALOG legacy home — original IA
-              </span>
+            <div className="relative rounded overflow-hidden bg-off-white aspect-4/3">
+              <Image
+                src="/images/cases/dalog/legacy-home.png"
+                alt="DALOG legacy home — original IA"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
+
 
             <div className="space-y-8">
               <div>
                 <Eyebrow color="red">01</Eyebrow>
-                <h4 className="mt-1 text-[18px] font-bold">
+                <h4 className="mt-1 text-body font-bold">
                   IA fragmented across parallel modules
                 </h4>
                 <p className="mt-2 text-body leading-relaxed">
@@ -395,7 +401,7 @@ export default function DalogPage() {
 
               <div>
                 <Eyebrow color="red">02</Eyebrow>
-                <h4 className="mt-1 text-[18px] font-bold">
+                <h4 className="mt-1 text-body font-bold">
                   Sensor data lived in silos
                 </h4>
                 <p className="mt-2 text-body leading-relaxed">
@@ -408,7 +414,7 @@ export default function DalogPage() {
 
               <div>
                 <Eyebrow color="red">03</Eyebrow>
-                <h4 className="mt-1 text-[18px] font-bold">
+                <h4 className="mt-1 text-body font-bold">
                   Daily workflows required cross-screen navigation
                 </h4>
                 <p className="mt-2 text-body leading-relaxed">
