@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import PullQuote from '@/components/case-study/PullQuote'
 import NextCase from '@/components/case-study/NextCase'
@@ -25,19 +26,19 @@ export default function BancolombiaPage() {
           <div className="mt-16 max-w-3xl grid md:grid-cols-3 gap-x-12 gap-y-6 border-t border-gray-light pt-8">
             <div>
               <Eyebrow>Industry</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 Digital Banking · Mobile App · Web Platform
               </p>
             </div>
             <div>
               <Eyebrow>Platform</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 SuperApp ecosystem · Millions of users in production
               </p>
             </div>
             <div>
               <Eyebrow>Role</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 UX Designer · 2019—2022 · via Multiplica
               </p>
             </div>
@@ -69,15 +70,23 @@ export default function BancolombiaPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="aspect-4/3 bg-off-white rounded flex items-center justify-center">
-                <span className="text-gray text-sm italic">
-                  [ Bancolombia SuperApp — standardized flows ]
-                </span>
+              <div className="relative aspect-4/3 rounded overflow-hidden bg-off-white">
+                <Image
+                  src="/images/cases/bancolombia/bancolombia-1.png"
+                  alt="Bancolombia SuperApp — standardized flows"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
-              <div className="aspect-4/3 bg-off-white rounded flex items-center justify-center">
-                <span className="text-gray text-sm italic">
-                  [ Bancolombia SuperApp — task flow walkthrough ]
-                </span>
+              <div className="relative aspect-4/3 rounded overflow-hidden bg-off-white">
+                <Image
+                  src="/images/cases/bancolombia/bancolombia-2.png"
+                  alt="Bancolombia SuperApp — task flow walkthrough"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>

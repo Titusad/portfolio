@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import PullQuote from '@/components/case-study/PullQuote'
 import NextCase from '@/components/case-study/NextCase'
@@ -31,19 +32,19 @@ export default function PaguiPage() {
           <div className="mt-16 max-w-3xl grid md:grid-cols-3 gap-x-12 gap-y-6 border-t border-gray-light pt-8">
             <div>
               <Eyebrow>Industry</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 Fintech · Micro-credit · WhatsApp commerce
               </p>
             </div>
             <div>
               <Eyebrow>Platform</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 Mobile app · Merchant dashboard · WhatsApp integration
               </p>
             </div>
             <div>
               <Eyebrow>Role</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 Product Designer · UX writing, app & dashboard design
               </p>
             </div>
@@ -73,15 +74,23 @@ export default function PaguiPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="aspect-4/3 bg-off-white rounded flex items-center justify-center">
-                <span className="text-gray text-sm italic">
-                  [ Pagui app — WhatsApp-based micro-credit flow ]
-                </span>
+              <div className="relative aspect-4/3 rounded overflow-hidden bg-off-white">
+                <Image
+                  src="/images/cases/pagui/pagui-1.png"
+                  alt="Pagui app — WhatsApp-based micro-credit flow"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
-              <div className="aspect-4/3 bg-off-white rounded flex items-center justify-center">
-                <span className="text-gray text-sm italic">
-                  [ Pagui — merchant dashboard ]
-                </span>
+              <div className="relative aspect-4/3 rounded overflow-hidden bg-off-white">
+                <Image
+                  src="/images/cases/pagui/pagui-2.png"
+                  alt="Pagui — merchant dashboard"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
