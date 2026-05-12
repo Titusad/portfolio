@@ -44,7 +44,7 @@ export default function ContactPage() {
 
             <div>
               <Eyebrow color="gray">Location</Eyebrow>
-              <p className="mt-2 text-[20px] font-light">
+              <p className="mt-2 text-body-l font-light">
                 Medellín, Colombia · UTC-5
               </p>
               <p className="mt-1 text-body-l text-gray-light">
@@ -54,7 +54,7 @@ export default function ContactPage() {
 
             <div>
               <Eyebrow color="gray">Languages</Eyebrow>
-              <p className="mt-2 text-[20px] font-light">
+              <p className="mt-2 text-body-l font-light">
                 Spanish · English
               </p>
               <p className="mt-1 text-body-l text-gray-light">
@@ -65,12 +65,6 @@ export default function ContactPage() {
 
           <div className="mt-16 pt-16 border-t border-gray-dark/50 flex flex-wrap gap-4">
             <Link
-              href="/cv/david-castrillon-cv.pdf"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-red-accent text-white font-medium hover:bg-red-accent/90 transition-colors"
-            >
-              Download CV ↓
-            </Link>
-            <Link
               href="/work/lifesafety-power"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/30 text-white font-medium hover:bg-white/5 transition-colors"
             >
@@ -78,7 +72,7 @@ export default function ContactPage() {
             </Link>
           </div>
 
-          <p className="mt-24 text-[14px] text-gray-light max-w-md italic">
+          <p className="mt-24 text-label text-gray-light max-w-md italic">
             Senior Product Designer · Enterprise Platforms (Salesforce + SAP)
             · AI-augmented workflow
           </p>

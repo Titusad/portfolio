@@ -72,14 +72,6 @@ export default function Hero() {
               >
                 See my work <ArrowRight size={16} />
               </a>
-              <a
-                href="/cv/david-castrillon-cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-transparent border border-white/40 text-white px-8 py-4 text-body font-light tracking-wide hover:border-white hover:bg-white/5 transition-all duration-200"
-              >
-                Download CV ↓
-              </a>
             </div>
           </div>
 

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import PullQuote from '@/components/case-study/PullQuote'
 import NextCase from '@/components/case-study/NextCase'
@@ -51,27 +52,35 @@ export default function RetailPage() {
               </div>
             </div>
 
-            <div className="aspect-4/3 bg-off-white rounded flex items-center justify-center">
-              <span className="text-gray text-sm italic">
-                [ Retail showcase — work samples ]
-              </span>
+            <div className="relative aspect-4/3 rounded overflow-hidden bg-off-white">
+              <Image
+                src="/images/cases/retail/studiof.png"
+                alt="Retail — work samples showcase"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
             {[
-              { name: 'Studio F', caption: 'fashion e-commerce' },
-              { name: 'ELA', caption: 'footwear retail' },
-              { name: 'Dupree-Azzorti', caption: 'MLM platform' },
-              { name: 'Claro', caption: 'telecom' },
+              { name: 'Studio F', caption: 'fashion e-commerce', img: 'studiof.png' },
+              { name: 'ELA', caption: 'footwear retail', img: 'ela.png' },
+              { name: 'Dupree-Azzorti', caption: 'MLM platform', img: 'dupree.png' },
+              { name: 'Claro', caption: 'telecom', img: 'claro.png' },
             ].map((b) => (
               <div key={b.name}>
-                <div className="aspect-square bg-off-white rounded flex items-center justify-center">
-                  <span className="text-gray text-xs italic text-center px-4">
-                    [ {b.name} — {b.caption} ]
-                  </span>
+                <div className="relative aspect-square bg-off-white rounded overflow-hidden">
+                  <Image
+                    src={`/images/cases/retail/${b.img}`}
+                    alt={`${b.name} — ${b.caption}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
                 </div>
-                <p className="mt-3 text-[14px] font-medium">{b.name}</p>
+                <p className="mt-3 text-label font-medium">{b.name}</p>
                 <p className="text-label text-gray">{b.caption}</p>
               </div>
             ))}

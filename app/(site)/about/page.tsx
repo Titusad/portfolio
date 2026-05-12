@@ -105,12 +105,6 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <Link
-                href="/cv/david-castrillon-cv.pdf"
-                className="inline-flex items-center gap-2 text-[14px] font-medium underline decoration-red-accent decoration-2 underline-offset-4"
-              >
-                Download CV ↓
-              </Link>
             </div>
           </div>
         </Container>
