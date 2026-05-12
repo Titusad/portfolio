@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 import PullQuote from '@/components/case-study/PullQuote'
 import NextCase from '@/components/case-study/NextCase'
@@ -25,19 +26,19 @@ export default function ZilliantPage() {
           <div className="mt-16 max-w-3xl grid md:grid-cols-3 gap-x-12 gap-y-6 border-t border-gray-light pt-8">
             <div>
               <Eyebrow>Industry</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 B2B Pricing & Revenue Optimization · Enterprise SaaS
               </p>
             </div>
             <div>
               <Eyebrow>Platform</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 Available on Salesforce AppExchange & SAP App Center
               </p>
             </div>
             <div>
               <Eyebrow>Role</Eyebrow>
-              <p className="mt-2 text-[14px]">
+              <p className="mt-2 text-label">
                 UX/UI Design Specialist · 2 years · via Team International
               </p>
             </div>
@@ -69,15 +70,23 @@ export default function ZilliantPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="aspect-[4/3] bg-off-white rounded flex items-center justify-center">
-                <span className="text-gray text-sm italic">
-                  [ Zilliant Price Manager — Salesforce-native dashboard ]
-                </span>
+              <div className="relative aspect-4/3 rounded overflow-hidden bg-off-white">
+                <Image
+                  src="/images/cases/zilliant/price-manager.png"
+                  alt="Zilliant Price Manager — Salesforce-native dashboard"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
-              <div className="aspect-[4/3] bg-off-white rounded flex items-center justify-center">
-                <span className="text-gray text-sm italic">
-                  [ Zilliant IQ — Multi-step pricing wizard ]
-                </span>
+              <div className="relative aspect-4/3 rounded overflow-hidden bg-off-white">
+                <Image
+                  src="/images/cases/zilliant/zilliant-iq.png"
+                  alt="Zilliant IQ — Multi-step pricing wizard"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
