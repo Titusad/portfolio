@@ -25,7 +25,7 @@ export default function PaguiPage() {
 
           <div className="mt-8 inline-block border border-gray-light px-4 py-2 rounded">
             <p className="text-label uppercase tracking-wider text-gray-dark">
-              Project shown under NDA · Visual assets are illustrative
+              Project shown under NDA · Real assets can be shown on a videocall.
             </p>
           </div>
 

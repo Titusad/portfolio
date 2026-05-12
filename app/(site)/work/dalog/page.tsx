@@ -40,6 +40,12 @@ export default function DalogPage() {
             Industrial IoT — Equipment Health Monitoring
           </p>
 
+          <div className="mt-8 inline-block border border-gray-light px-4 py-2 rounded">
+            <p className="text-label uppercase tracking-wider text-gray-dark">
+              Project shown under NDA · Real assets can be shown on a videocall.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             <MetaBlock label="Industry">
               Industrial Diagnostics — Mining · Cement · Metals
